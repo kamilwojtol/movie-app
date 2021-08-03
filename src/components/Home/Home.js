@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Home() {
   return (
     <div>
-      <h1>Eluwina foo</h1>
+      <h1>This is Home component</h1>
     </div>
-  )
+  );
 }
