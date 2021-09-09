@@ -1,34 +1,44 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from 'react-router-dom';
-import Films from '../../Films/Films';
-import Social from '../../Social/Social';
-import About from '../../About/About';
+import React from "react";
+import { Link } from "react-router-dom";
 
+import styled from "styled-components";
+
+const NavbarComponent = styled.div``;
+const NavbarList = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  list-style-type: none;
+`;
+const NavbarItem = styled.li``;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fca311;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  margin: 0 15px;
+`;
 
 function Navbar() {
   return (
-    
-    <div>
-      <ul>
+    <NavbarComponent>
+      <NavbarList>
+        <NavbarItem>
+          <StyledLink to="/">Home</StyledLink>
+        </NavbarItem>
         <li>
-          <Link to="/">Home</Link>
+          <StyledLink to="/films">Films</StyledLink>
         </li>
         <li>
-          <Link to="/films">Films</Link>
+          <StyledLink to="/social">Social</StyledLink>
         </li>
         <li>
-          <Link to="/social">Social</Link>
+          <StyledLink to="/about">About</StyledLink>
         </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </div>
-   
-  )
+      </NavbarList>
+    </NavbarComponent>
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -3,16 +3,29 @@ import styled from "styled-components";
 
 const HomeContainer = styled.div`
   background-color: #14213d;
+  height: calc(100vh - 79px);
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
 const HomeTitle = styled.h1`
-  font-family: "Arvo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 4rem;
   color: #fca311;
 `;
 
+const TitleAccent = styled.span`
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e5e5e5;
+`;
+
 const HomeWrapper = styled.div`
-  margin: 1rem;
+  padding: 1rem;
 `;
 
 const HomeText = styled.div`
@@ -24,8 +37,8 @@ const HomeText = styled.div`
 
 const HomeSubtitle = styled.h3`
   font-size: 2rem;
-  color: #fca311;
-  font-family: "Lato", sans-serif;
+  color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 `;
 
@@ -35,7 +48,7 @@ export default function Home() {
       <HomeWrapper>
         <HomeText>
           <HomeTitle>
-            Say hello to <span className="home-title-accent">MovieApp</span>
+            Say hello to Movie<TitleAccent>App</TitleAccent>
           </HomeTitle>
           <HomeSubtitle>
             The best movie website on the entire internet!
