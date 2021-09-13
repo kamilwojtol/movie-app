@@ -33,9 +33,9 @@ function Navbar() {
         <li>
           <StyledLink to="/social">Social</StyledLink>
         </li>
-        <li>
+        {/* <li>
           <StyledLink to="/about">About</StyledLink>
-        </li>
+        </li> */}
       </NavbarList>
     </NavbarComponent>
   );

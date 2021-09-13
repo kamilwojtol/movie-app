@@ -27,6 +27,18 @@ const FilmInput = styled.input`
 const MovieWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1150px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const MovieBlock = styled.div`
@@ -139,7 +151,7 @@ export default function Films() {
           const image = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`;
 
           return (
-            <MovieBlock>
+            <MovieBlock key={movie.id}>
               <MoviePoster src={image} alt="poster" />
               <MovieTextBlock>
                 <MovieTitle>{movie.original_title}</MovieTitle>
